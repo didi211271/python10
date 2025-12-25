@@ -9,3 +9,71 @@ def upper(t):
     return result.strip()
 print(upper("PriVet"))
 
+2 задание
+def punct(txt):
+    signs = '!? .,()'
+    count = 0 
+    for char in txt: 
+        if char in signs:
+            count += 1 
+    return count
+print(punct("(Как дела?)"))
+
+3 задание
+def create_cube(x, y):
+    for _ in range(y):
+        print('*' * x)
+
+create_cube(5, 3)
+
+4 задание
+
+def double(s):
+    result = ""
+    for char in s:
+        result += char * 2
+    return result
+print(double('строка'))
+
+5 задание 
+def Constructor(details, people, cars, trees):
+    sets_from_details = details // 72
+    sets_from_people = people // 4
+    sets_from_cars = cars // 2
+    sets_from_trees = trees // 7
+
+    return min(sets_from_details, sets_from_people, sets_from_cars, sets_from_trees)
+
+print(Constructor(144, 8, 4, 14))
+print(Constructor(10000, 16, 6, 2))
+
+6 задание
+def create_list(length, value=0):
+    return [value] * length
+print(create_list(5, 3))
+print(create_list(3)) 
+
+7 задание 
+def custom_filter(lst):
+    total = 0
+    for item in lst:
+        if isinstance(item, int) and item % 7 == 0:
+            total += item
+    print(f"сумма: {total}")
+    return total <= 83
+
+print(custom_filter([1, 10.5, 'txt', 14, 2, 56]))
+
+8 задание
+def square(x, y):
+    print("_" * (4 * y + 1))
+    
+    for i in range(x):
+        row = "|"
+        for j in range(1, y + 1):
+            row += f" {j} |"
+        print(row)
+    
+    print("_" * (4 * y + 1))
+
+square(2, 3)
